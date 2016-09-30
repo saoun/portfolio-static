@@ -5,23 +5,23 @@ module Sinatra
     end
 
     get '/about' do
-      erb :index
+      erb :about
     end
 
     get '/workshops' do
-      erb :index
+      erb :workshops
     end
 
     get '/cv' do
-      erb :index
+      erb :cv
     end
 
     get '/projects' do
-      erb :index
+      erb :projects
     end
 
     get '/contact' do
-      erb :index
+      erb :contact
     end
 
 
