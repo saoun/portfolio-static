@@ -1,0 +1,130 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover{
+  color: #da0f0f;
+}
+
+a:hover#menu-icon {
+  background-color: #333;
+}
+
+header {
+  font-weight: 300;
+  width: 100%;
+  height: 100px;
+/*   position: fixed;
+ */  top: 0;
+  left: 0;
+  border-bottom: 1px solid black;
+  z-index: 100;
+}
+
+#logo {
+  font-weight: 700;
+  font-size: 30px;
+  margin-left: 60px;
+  float: left;
+  display: block;
+}
+
+nav {
+  float: right;
+  padding: 20px;
+}
+
+.navUL {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  float: left;
+  padding: 10px;
+}
+
+#menu-icon {
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: #333 url(../img/menu-icon.png) center;
+}
+
+.banner {
+  position: fixed;
+  background: url(../img/photo1.jpg) no-repeat center;
+  width: 100%;
+  height: 30%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; /* check these again */
+/*   background-position: 100px 100px;
+ */
+}
+
+.intro1{
+  position: absolute;
+}
+
+.widgetImg {
+  width: 70px;
+  position: relative;
+
+}
+
+.widgetImg:hover {
+  top: -3px;
+  transition: .65s;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+
+  header {
+    position: absolute;
+  }
+
+  #menu-icon {
+    display:inline-block;
+    background-color: #333;
+  }
+
+  nav ul, nav:active ul {
+    display: none;
+    position: absolute;
+    padding: 26px;
+    background: white;
+    border: 1px solid #444;
+    right: 20px;
+    top: 60px;
+    width: 50%;
+    border-radius: 4px;
+  }
+
+  nav li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  nav:hover ul {
+    display: block;
+  }
+
+
