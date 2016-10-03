@@ -78,7 +78,8 @@ li {
 .widgetImg {
   width: 70px;
   position: relative;
-
+  align-content: center;
+  text-align: center;
 }
 
 .widgetImg:hover {
@@ -87,9 +88,20 @@ li {
 }
 
 .row {
+/*   width: 50%;
+ */  text-align: center;
   margin: 0 auto;
 }
 
+.rowLI {
+  padding: 15px;
+}
+
+h1{
+  text-align: center;
+  font-weight: 300;
+  font-size: 100px;
+}
 
 
 /*MEDIA QUERY*/
