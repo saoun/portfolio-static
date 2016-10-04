@@ -4,8 +4,14 @@ body {
   margin: 0;
 }
 
-a{
+/* NAVBAR */
+
+ a {
   text-decoration: none;
+  color: #828080;
+}
+
+#logo a {
   color: #333;
 }
 
@@ -21,8 +27,7 @@ header {
   font-weight: 300;
   width: 100%;
   height: 100px;
-/*   position: fixed;
- */  top: 0;
+  top: 0;
   left: 0;
   border-bottom: 1px solid black;
   z-index: 100;
@@ -38,7 +43,7 @@ header {
 
 nav {
   float: right;
-  padding: 20px;
+  padding: 32px;
 }
 
 .navUL {
@@ -48,7 +53,9 @@ nav {
 .navUL li {
   display: inline-block;
   float: left;
-  padding: 10px;
+  padding: 0 15px 0 15px;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
 #menu-icon {
@@ -57,6 +64,9 @@ nav {
   height: 40px;
   background: #333 url(../img/menu-icon.png) center;
 }
+
+
+/* ABOUT PAGE */
 
 .banner {
   position: relative;
@@ -79,7 +89,10 @@ nav {
 
 }
 
-.widgetImg {
+
+/* CONTACT PAGE */
+
+ .widgetImg {
   width: 70px;
   position: relative;
   align-content: center;
@@ -90,12 +103,6 @@ nav {
   top: -3px;
   transition: .65s;
 }
-
-/* .row {
-  width: 50%;
-  text-align: center;
-  margin: 0 auto;
-} */
 
 .rowUL {
   text-align: center;
@@ -110,11 +117,12 @@ nav {
   display: inline-block;
 }
 
-h1{
+h1 {
   text-align: center;
   font-weight: 300;
   font-size: 100px;
 }
+
 
 
 /*MEDIA QUERY*/
