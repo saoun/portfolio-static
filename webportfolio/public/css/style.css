@@ -93,7 +93,6 @@ nav {
  */
 }
 
-
 .row {
   margin: 0 -10px;
   margin-bottom: 20px;
@@ -113,13 +112,11 @@ nav {
   letter-spacing: 1px;
 }
 
-/* .intro2 {
-  max-width: 50%;
-  float: right;
+.intro2 {
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 28px;
-} */
+}
 
 
 /* CONTACT PAGE */
