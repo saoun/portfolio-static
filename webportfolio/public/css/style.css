@@ -45,7 +45,7 @@ nav {
   list-style: none;
 }
 
-li {
+.navUL li {
   display: inline-block;
   float: left;
   padding: 10px;
@@ -59,10 +59,10 @@ li {
 }
 
 .banner {
-  position: fixed;
+  position: relative;
   background: url(../img/photo1.jpg) no-repeat center;
   width: 100%;
-  height: 30%;
+  height: 30vh;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -71,8 +71,12 @@ li {
  */
 }
 
+.intro{
+  position: relative;
+}
+
 .intro1{
-  position: absolute;
+
 }
 
 .widgetImg {
@@ -87,14 +91,23 @@ li {
   transition: .65s;
 }
 
-.row {
-/*   width: 50%;
- */  text-align: center;
+/* .row {
+  width: 50%;
+  text-align: center;
   margin: 0 auto;
+} */
+
+.rowUL {
+  text-align: center;
+  margin: 0 auto;
+  align-content: center;
+  padding: 0;
+  width: 100%;
 }
 
 .rowLI {
   padding: 15px;
+  display: inline-block;
 }
 
 h1{
