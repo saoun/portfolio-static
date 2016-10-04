@@ -1,3 +1,15 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #333;
@@ -81,13 +93,33 @@ nav {
  */
 }
 
-.intro{
-  position: relative;
+
+.row {
+  margin: 0 -10px;
+  margin-bottom: 20px;
 }
 
-.intro1{
+.row:last-child {
+  margin-bottom: 0;
+}
+
+[class*="col-"] {
+  padding: 10px;
 
 }
+
+.intro1 h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* .intro2 {
+  max-width: 50%;
+  float: right;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 28px;
+} */
 
 
 /* CONTACT PAGE */
@@ -123,13 +155,28 @@ h1 {
   font-size: 100px;
 }
 
+/* end */
+
 
 
 /*MEDIA QUERY*/
+@media all and (min-width: 600px) {
+  .col-1-2 {
+    float: left;
+    width: 50%;
+  }
+}
+
+
 @media only screen and (max-width : 640px) {
 
   header {
     position: absolute;
+  }
+
+  .intro1 .intro2 {
+    float: left;
+    width: 50%;
   }
 
   #menu-icon {
