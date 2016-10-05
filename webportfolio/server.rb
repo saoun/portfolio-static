@@ -20,6 +20,10 @@ module Sinatra
       erb :projects
     end
 
+    get '/photo' do
+      erb :photo
+    end
+
     get '/contact' do
       erb :contact
     end

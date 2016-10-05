@@ -14,10 +14,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #333;
   margin: 0;
+  padding-top: 100px;
 }
 
 /* NAVBAR */
-
  a {
   text-decoration: none;
   color: #828080;
@@ -41,8 +41,10 @@ header {
   height: 100px;
   top: 0;
   left: 0;
-  border-bottom: 1px solid black;
-  z-index: 100;
+/*   border-bottom: 1px solid black;
+ */  z-index: 100;
+  position: fixed;
+  background-color: white;
 }
 
 #logo {
@@ -127,12 +129,6 @@ nav {
   margin-top: 60px;
 }
 
-/* .workshops hr{
-  margin-right: 326px;
-  margin-left: 326px;
-  margin-bottom: 40px;
-} */
-
 .workshops p {
   font-weight: 300;
   line-height: 30px;
@@ -148,13 +144,43 @@ nav {
   height: 1px;
 }
 
+/* CV */
+.cv h3 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.col-1-3 h3 {
+  margin-left: 20px;
+}
+
+.cv h4 {
+  font-weight: 300;
+  margin-top: -15px;
+  padding: 0;
+}
+
+.cv h5 {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 40px;
+  margin-right: 30px;
+  margin-top: -10px;
+  text-align: justify;
+}
+
+.dividerCV {
+  background-color: #e2e0e0;
+  margin: 0 41px 40px 58px;
+  height: 1px;
+}
+
 
 /* CONTACT PAGE */
  .widgetImg {
-  width: 70px;
+  width: 50px;
   position: relative;
-  align-content: center;
-  text-align: center;
 }
 
 .widgetImg:hover {
@@ -165,13 +191,12 @@ nav {
 .rowUL {
   text-align: center;
   margin: 0 auto;
-  align-content: center;
   padding: 0;
   width: 100%;
 }
 
 .rowLI {
-  padding: 15px;
+  padding: 10px;
   display: inline-block;
 }
 
@@ -179,9 +204,21 @@ h1 {
   text-align: center;
   font-weight: 300;
   font-size: 100px;
+  margin-top: 120px;
 }
 /* end */
 
+
+.temp {
+  text-align: center;
+  margin-top: 100px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.temp a {
+  color: #da0f0f;
+}
 
 
 /*MEDIA QUERY*/
@@ -190,8 +227,18 @@ h1 {
     float: left;
     width: 50%;
   }
-}
 
+  .col-1-3 {
+    float: left;
+    width: 33.33%;
+  }
+
+  .col-2-3 {
+    float: left;
+    width: 66.66%;
+  }
+
+}
 
 @media only screen and (max-width : 640px) {
 
