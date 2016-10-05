@@ -1,5 +1,5 @@
 require 'sinatra'
-
+require 'rubygems'
 
   class Server < Sinatra::Base
     get "/" do
