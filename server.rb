@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'rubygems'
 
-  class Server < Sinatra::Base
+  # class Server < Sinatra::Base
     get "/" do
       erb :index
     end
@@ -32,4 +32,4 @@ require 'rubygems'
 
 
 
-end
+# end
