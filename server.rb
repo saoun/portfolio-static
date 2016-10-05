@@ -1,6 +1,6 @@
 require 'sinatra'
 
-module Sinatra
+
   class Server < Sinatra::Base
     get "/" do
       erb :index
@@ -31,5 +31,5 @@ module Sinatra
     end
 
 
-  end
+
 end
