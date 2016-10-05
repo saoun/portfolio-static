@@ -79,7 +79,6 @@ nav {
 
 
 /* ABOUT PAGE */
-
 .banner {
   position: relative;
   background: url(../img/photo1.jpg) no-repeat center;
@@ -94,8 +93,7 @@ nav {
 }
 
 .row {
-  margin: 0 -10px;
-  margin-bottom: 20px;
+  margin: 5px 30px;
 }
 
 .row:last-child {
@@ -116,11 +114,42 @@ nav {
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 28px;
+  text-align: justify;
+}
+
+.intro2 a {
+  color: #da0f0f;
+}
+
+/* WORKSHOPS PAGE */
+.workshops {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* .workshops hr{
+  margin-right: 326px;
+  margin-left: 326px;
+  margin-bottom: 40px;
+} */
+
+.workshops p {
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.workshops strong {
+  font-weight: 600;
+}
+
+.divider {
+  background-color: #cccccc;
+  margin: 0 326px 40px 326px;
+  height: 1px;
 }
 
 
 /* CONTACT PAGE */
-
  .widgetImg {
   width: 70px;
   position: relative;
@@ -151,7 +180,6 @@ h1 {
   font-weight: 300;
   font-size: 100px;
 }
-
 /* end */
 
 
