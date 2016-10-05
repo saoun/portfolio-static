@@ -2,7 +2,7 @@ require 'sinatra'
 require 'rubygems'
 
   # class Server < Sinatra::Base
-    get "/" do
+    get '/' do
       erb :index
     end
 
