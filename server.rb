@@ -1,3 +1,5 @@
+require 'sinatra'
+
 module Sinatra
   class Server < Sinatra::Base
     get "/" do
