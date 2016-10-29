@@ -135,6 +135,10 @@ nav {
   font-weight: 600;
 }
 
+.workshops a{
+  color: #333;
+}
+
 .divider {
   background-color: #cccccc;
   margin: 0 326px 40px 326px;
