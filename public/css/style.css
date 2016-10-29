@@ -139,6 +139,10 @@ nav {
   color: #333;
 }
 
+.workshops a:hover{
+  color: #da0f0f;
+}
+
 .divider {
   background-color: #cccccc;
   margin: 0 326px 40px 326px;
