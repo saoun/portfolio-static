@@ -191,6 +191,11 @@ nav {
 }
 
 
+img .projectImg {
+  width: 100%;
+}
+
+
 /* CONTACT PAGE */
  .widgetImg {
   width: 50px;
