@@ -164,6 +164,10 @@ nav {
   padding: 0;
 }
 
+.cv h4.nom {
+  margin-top: 18px;
+}
+
 .cv h4 {
   font-weight: 300;
   margin-top: -15px;
@@ -173,7 +177,7 @@ nav {
 .cv h5 {
   font-weight: 300;
   font-size: 15px;
-  line-height: 20px;
+  line-height: 21px;
   margin-bottom: 40px;
   margin-right: 160px;
   margin-top: -10px;
