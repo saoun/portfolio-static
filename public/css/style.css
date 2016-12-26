@@ -80,14 +80,18 @@ nav {
 /* /////////////////////////////////////////////////////////////*/
 /* PROJECT PAGE */
 
-/* img #projectImg {
-  width: 100%;
-  height: 50px;
+div .projects {
+  margin-top: 100px;
 }
- */
+
+.projectImgs > [class*="col-"] {
+  padding: 10px;
+}
 
 .projectImgs > img{
   height: 250px;
+  margin-bottom: 60px;
+  margin-left: 100px;
 }
 
 /* /////////////////////////////////////////////////////////////*/
@@ -111,11 +115,6 @@ nav {
 
 .row:last-child {
   margin-bottom: 0;
-}
-
-[class*="col-"] {
-  padding: 10px;
-
 }
 
 .intro1 h3 {
