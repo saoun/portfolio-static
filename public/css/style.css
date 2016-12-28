@@ -92,7 +92,7 @@ div.projectColumn {
     position: relative;
   }
 
-.projectColumn > img{
+.projectLink > img{
   height: 100%;
 }
 
@@ -172,6 +172,7 @@ div.projectColumn {
 .workshops p {
   font-weight: 300;
   line-height: 30px;
+  padding: 0 15px 0 15px;
 }
 
 .workshops strong {
@@ -281,9 +282,8 @@ h1 {
 /* /////////////////////////////////////////////////////////////*/
 /*MEDIA QUERY*/
 @media all and (max-width: 600px) {
+
 div.projectColumn {
-/*     height: 50vw;
-    width: 90vw; */
     margin-left: 0;
     height: 100%;
     width: 100%;
