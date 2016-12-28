@@ -94,6 +94,32 @@ div .projects {
   margin-left: 100px;
 }
 
+/* .projectImgs > img:hover{
+  opacity: 0.5;
+} */
+
+/* .projectText {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 3px;
+  position: absolute;
+  margin-top: 50%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+} */
+
+/* .projectBack {
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+} */
+
+
 /* /////////////////////////////////////////////////////////////*/
 /* ABOUT PAGE */
 .banner {
