@@ -84,40 +84,45 @@ div .projects {
   margin-top: 100px;
 }
 
-.projectImgs > [class*="col-"] {
-  padding: 10px;
+div.projectColumn {
+    height: 250px;
+    width: 450px;
+    margin-left: 100px;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+
+.projectColumn > img{
+  height: 100%;
 }
 
-.projectImgs > img{
-  height: 250px;
-  margin-bottom: 60px;
-  margin-left: 100px;
-}
 
-/* .projectImgs > img:hover{
-  opacity: 0.5;
-} */
-
-/* .projectText {
+.projectText {
   text-align: center;
   vertical-align: middle;
   color: white;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 3px;
   position: absolute;
-  margin-top: 50%;
+  margin-top: 25%;
   opacity: 0;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-} */
+}
 
-/* .projectBack {
+.projectBack {
   background-color: black;
-  position: relative;
-  overflow: hidden;
-} */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+}
 
 
 /* /////////////////////////////////////////////////////////////*/
@@ -278,6 +283,27 @@ h1 {
 
 /* /////////////////////////////////////////////////////////////*/
 /*MEDIA QUERY*/
+@media all and (max-width: 600px) {
+div.projectColumn {
+/*     height: 50vw;
+    width: 90vw; */
+    margin-left: 0;
+    height: 55%;
+    width: 100%;
+  }
+
+  .projectLink > img {
+    width: 100%;
+    height: 55%;
+  }
+
+  .projectBack{
+    width: 100%;
+    height: 55%;
+  }
+}
+
+
 @media all and (min-width: 600px) {
   .col-1-2 {
     float: left;
