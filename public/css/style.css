@@ -92,11 +92,9 @@ div.projectColumn {
     position: relative;
   }
 
-
 .projectColumn > img{
   height: 100%;
 }
-
 
 .projectText {
   text-align: center;
@@ -121,7 +119,6 @@ div.projectColumn {
   height: 100%;
   width: 100%;
   z-index: -1;
-
 }
 
 
@@ -288,18 +285,20 @@ div.projectColumn {
 /*     height: 50vw;
     width: 90vw; */
     margin-left: 0;
-    height: 55%;
+    height: 100%;
     width: 100%;
   }
 
-  .projectLink > img {
+  .projectImg {
+    margin-left: 0;
     width: 100%;
-    height: 55%;
+    height: 100%;
   }
 
   .projectBack{
+    margin-left: 0;
     width: 100%;
-    height: 55%;
+    height: 97%;
   }
 }
 
