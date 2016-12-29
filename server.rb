@@ -30,6 +30,22 @@ require 'rubygems'
       erb :contact
     end
 
+    get '/projects/rightsforward' do
+      erb :rightsforward
+    end
+
+    get '/projects/backenddev' do
+      erb :backenddev
+    end
+
+    get '/projects/halfways' do
+      erb :halfways
+    end
+
+    get '/projects/gamedev' do
+      erb :halfways
+    end
+
 
 
 # end
