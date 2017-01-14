@@ -43,7 +43,7 @@ require 'rubygems'
     end
 
     get '/projects/gamedev' do
-      erb :halfways
+      erb :gamedev
     end
 
 
