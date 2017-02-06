@@ -46,6 +46,8 @@ require 'rubygems'
       erb :gamedev
     end
 
-
+    get '/projects/rightsfwd' do
+      erb :rightsfwd
+    end
 
 # end
