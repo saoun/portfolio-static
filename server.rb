@@ -54,4 +54,8 @@ require 'rubygems'
       erb :raddotcat
     end
 
+    get '/projects/trumptwittering' do
+      erb :trumptwittering
+    end
+
 # end
