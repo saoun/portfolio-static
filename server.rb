@@ -50,4 +50,8 @@ require 'rubygems'
       erb :rightsfwd
     end
 
+    get '/projects/raddotcat' do
+      erb :raddotcat
+    end
+
 # end
