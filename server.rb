@@ -58,4 +58,9 @@ require 'rubygems'
       erb :trumptwittering
     end
 
+    get '/chamoun' do
+      erb :chamoun
+    end
+
+
 # end
