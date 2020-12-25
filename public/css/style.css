@@ -306,6 +306,11 @@ h1 {
   color: #da0f0f;
 }
 
+.test {
+  margin-top: 20px;
+}
+
+
 /* /////////////////////////////////////////////////////////////*/
 /*MEDIA QUERY*/
 @media all and (max-width: 600px) {
@@ -397,16 +402,4 @@ div.projectColumn {
   nav:hover ul {
     display: block;
   }
-
-/* /////////////////////////////////////////////////////////////*/
-/* chamoun */
-
-.gameOver {
-  font-family: Phosphate;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 80px;
-  padding-top: 0;
-  color: #900C3F;
-}
 

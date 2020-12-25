@@ -4,81 +4,80 @@
   <link href="public/css/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Chamoun</title>
 </head>
+
 <body>
+
   <div class="container">
 
 
-<header id="header">
+    <div class="workshops clearfix">
 
-  <h3 id="logo">Marhaba</h3>
+      <div id="masterKey">
+        <p>Marhaba Chamoun.</p>
+        <p>Enter key:</p>
+        <input id="masterKeyValue">
+        <br>
+        <button class="test" type="button" onclick="masterKey()">Submit</button>
+        <p id="demo"></p>
+      </div>
 
-</header>
+      <div id="question1" style="display:none;">
+        <p>I see you learned.</p>
+        <p>Now, tell me, what should be long?</p>
+        <input id="firstValue">
+        <button class="test" type="button" onclick="question1()">Submit</button>
+        <p id="demo1"></p>
+      </div>
 
+      <div id="question2" style="display:none;">
+        <p>That's right.</p>
+        <p>Now, tell me, what should be swift?</p>
+        <input id="secondValue">
+        <button class="test" type="button" onclick="question2()">Submit</button>
+        <p id="demo2"></p>
+      </div>
 
-<div id="masterKey">
-  <p>Enter key:</p>
-  <input id="masterKeyValue">
-  <button type="button" onclick="masterKey()">Submit</button>
-  <p id="demo"></p>
-</div>
+      <div id="question3" style="display:none;">
+        <p>On the right track...</p>
+        <p>Hala going out, also known as:</p>
+        <input id="thirdValue">
+        <button class="test" type="button" onclick="question3()">Submit</button>
+        <p id="demo3"></p>
+      </div>
 
-<div id="question1" style="display:none;">
-  <p>I see you learned.</p>
-  <p>Now, tell me, what should be long?</p>
-  <input id="firstValue">
-  <button type="button" onclick="question1()">Submit</button>
-  <p id="demo1"></p>
-</div>
+      <div id="question4" style="display:none;">
+        <p>Perfect!</p>
+        <p>A defining date (number only):</p>
+        <input id="fourthValue">
+        <button class="test" type="button" onclick="question4()">Submit</button>
+        <p id="demo4"></p>
+      </div>
 
-<div id="question2" style="display:none;">
-  <p>That's right.</p>
-  <p>Now, tell me, what should be swift?</p>
-  <input id="secondValue">
-  <button type="button" onclick="question2()">Submit</button>
-  <p id="demo2"></p>
-</div>
+      <div id="question5" style="display:none;">
+        <p>You got it :)</p>
+        <p>Which consciousness do you choose?</p>
+        <input id="fifthValue">
+        <button class="test" type="button" onclick="question5()">Submit</button>
+        <p id="demo5"></p>
+      </div>
 
-<div id="question3" style="display:none;">
-  <p>On the right track...</p>
-  <p>Hala going out, also known as:</p>
-  <input id="thirdValue">
-  <button type="button" onclick="question3()">Submit</button>
-  <p id="demo3"></p>
-</div>
+      <div id="question6" style="display:none;">
+        <p>Indeed, indeed.</p>
+        <p>'The best fantasy is written in the language of:'</p>
+        <input id="sixthValue">
+        <button class="test" type="button" onclick="question6()">Submit</button>
+        <p id="demo6"></p>
+      </div>
 
-<div id="question4" style="display:none;">
-  <p>Perfect!</p>
-  <p>A defining date (number only):</p>
-  <input id="fourthValue">
-  <button type="button" onclick="question4()">Submit</button>
-  <p id="demo4"></p>
-</div>
+      <div id="endText" style="display:none;">
+        <p>Yes!<br>Hope you liked the quote. It's one of my favorites.<br>
+        Fantasy takes me to many different worlds in my mind, and so does music. <br>Here you go: </p>
 
-<div id="question5" style="display:none;">
-  <p>You got it :)</p>
-  <p>Which consciousness do you choose?</p>
-  <input id="fifthValue">
-  <button type="button" onclick="question5()">Submit</button>
-  <p id="demo5"></p>
-</div>
+      </div>
 
-<div id="question6" style="display:none;">
-  <p>Indeed, indeed.</p>
-  <p>'The best fantasy is written in the language of:'</p>
-  <input id="sixthValue">
-  <button type="button" onclick="question6()">Submit</button>
-  <p id="demo6"></p>
-</div>
-
-<div id="endText" style="display:none;">
-  <p>Yes! You probably had to look this one up... Hope you liked the quote. It's one of my favorites.
-  Fantasy takes me to many different worlds in my mind, and so does music. Here you go: </p>
-
-</div>
-
+    </div>
 
 
 
