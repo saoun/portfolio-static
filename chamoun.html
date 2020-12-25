@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+  <link href="public/css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Chamoun</title>
+</head>
+<body>
+  <div class="container">
+
+
+<header id="header">
+
+  <h3 id="logo">Marhaba</h3>
+
+<!--   <nav>
+    <a href="#" id="menu-icon"></a>
+    <ul class="navUL">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="workshops.html">TALKS&EVENTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+
+  </nav> -->
+
+ </header> <!-- /header -->
+
+
+
+<div id="masterKey">
+  <p>Enter key:</p>
+  <input id="masterKeyValue">
+  <button type="button" onclick="masterKey()">Submit</button>
+  <p id="demo"></p>
+</div>
+
+<div id="question1" style="display:none;">
+  <p>I see you learned.</p>
+  <p>Now, tell me, what should be long?</p>
+  <input id="firstValue">
+  <button type="button" onclick="question1()">Submit</button>
+  <p id="demo1"></p>
+</div>
+
+<div id="question2" style="display:none;">
+  <p>That's right.</p>
+  <p>Now, tell me, what should be swift?</p>
+  <input id="secondValue">
+  <button type="button" onclick="question2()">Submit</button>
+  <p id="demo2"></p>
+</div>
+
+<div id="question3" style="display:none;">
+  <p>On the right track...</p>
+  <p>Hala going out, also known as:</p>
+  <input id="thirdValue">
+  <button type="button" onclick="question3()">Submit</button>
+  <p id="demo3"></p>
+</div>
+
+
+
+<script>
+
+  function masterKey() {
+
+  var key, text;
+
+  // Get the value of the input field with id="numb"
+  key = document.getElementById("masterKeyValue").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if ( key === "patience") {
+    document.getElementById('question1').style.display = "block";
+    document.getElementById('masterKey').style.display = "none";
+  } else {
+    text = "Not quite. Try again.";
+    document.getElementById("demo").innerHTML = text;
+  }
+}
+
+
+  function question1() {
+
+  var first, text1;
+
+  // Get the value of the input field with id="numb"
+  first = document.getElementById("firstValue").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if ( first === "survival") {
+    document.getElementById('question2').style.display = "block";
+    document.getElementById('question1').style.display = "none";
+  } else {
+    text1 = "Try again, Chamoun...";
+    document.getElementById("demo1").innerHTML = text1;
+  }
+}
+
+function question2() {
+
+  var second, text2;
+
+  // Get the value of the input field with id="numb"
+  second = document.getElementById("secondValue").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if ( second === "death") {
+    document.getElementById('question3').style.display = "block";
+    document.getElementById('question2').style.display = "none";
+  } else {
+    text1 = "tsk tsk tsk";
+    document.getElementById("demo2").innerHTML = text2;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+  // working prompts
+//   (function(){
+
+//   var answerOne = prompt("Enter key");
+//   if (answerOne === "patience" || answerOne === "Patience") {
+//     alert ("I see you learned.");
+//   } else {
+//     alert ("Not quite right...");
+//   };
+
+//   var answerTwo = prompt("What should be long?");
+//   if (answerTwo === "survival" || answerTwo === "Survival") {
+//     alert ("That's right");
+//   } else {
+//     alert ("Try again, Chamoun...");
+//   }
+
+//   var answerThree = prompt("What should be swift?");
+//   if (answerThree === "death" || answerThree === "Death") {
+//     alert ("On the right track...");
+//   } else {
+//     alert ("tsk tsk tsk");
+//   }
+
+//   var answerFour = prompt("Hala going out, also known as:")
+//   if (answerFour === "the torment of saint anthony" || answerFour === "the torment of Saint Anthony") {
+//     alert ("Perfect!");
+//   } else {
+//     alert ("Nope. Try again.")
+//   }
+
+//   var answerFive = prompt("A defining date (number only):")
+//   if (answerFive === "21") {
+//     alert ("You got it :)");
+//   } else {
+//     alert ("Watchu talkin about...")
+//   }
+
+//   var answerSix = prompt("Which consciousness do you choose?")
+//   if (answerSix === "lantern" || answerSix === "lantern consciousness") {
+//     alert ("Indeed, indeed.");
+//   } else {
+//     alert ("Hmmm... are you sure though?")
+//   }
+
+//   var answerSeven = prompt(" 'The best fantasy is written in the language of:' ")
+//   if (answerSeven === "dreams" || answerSeven === "Dreams") {
+//     alert ("Yes! You had to look this one up, didn't you... ");
+//   } else {
+//     alert ("Maybe look it up...")
+//   }
+
+//   alert ("Hope you liked this quote. It's one of my favorites. Fantasy takes me to many worlds, and so does music. Here you go: ")
+// })();
+
+</script>
+
+</html>
