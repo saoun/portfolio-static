@@ -60,19 +60,49 @@
   <p id="demo3"></p>
 </div>
 
+<div id="question4" style="display:none;">
+  <p>Perfect!</p>
+  <p>A defining date (number only):</p>
+  <input id="fourthValue">
+  <button type="button" onclick="question4()">Submit</button>
+  <p id="demo4"></p>
+</div>
+
+<div id="question5" style="display:none;">
+  <p>You got it :)</p>
+  <p>Which consciousness do you choose?</p>
+  <input id="fifthValue">
+  <button type="button" onclick="question5()">Submit</button>
+  <p id="demo5"></p>
+</div>
+
+<div id="question6" style="display:none;">
+  <p>Indeed, indeed.</p>
+  <p>'The best fantasy is written in the language of:'</p>
+  <input id="sixthValue">
+  <button type="button" onclick="question6()">Submit</button>
+  <p id="demo6"></p>
+</div>
+
+<div id="endText" style="display:none;">
+  <p>Yes! You probably had to look this one up... Hope you liked the quote. It's one of my favorites.
+  Fantasy takes me to many different worlds in my mind, and so does music. Here you go: </p>
+
+</div>
+
+
 
 
 <script>
 
   function masterKey() {
 
-  var key, text;
+  var x, text;
 
   // Get the value of the input field with id="numb"
-  key = document.getElementById("masterKeyValue").value;
+  x = document.getElementById("masterKeyValue").value;
 
-  // If x is Not a Number or less than one or greater than 10
-  if ( key === "patience") {
+  if ( x === "patience" || x === "Patience") {
     document.getElementById('question1').style.display = "block";
     document.getElementById('masterKey').style.display = "none";
   } else {
@@ -82,37 +112,99 @@
 }
 
 
-  function question1() {
+function question1() {
 
-  var first, text1;
+  var x, text;
 
   // Get the value of the input field with id="numb"
-  first = document.getElementById("firstValue").value;
+  x = document.getElementById("firstValue").value;
 
-  // If x is Not a Number or less than one or greater than 10
-  if ( first === "survival") {
+  if ( x === "survival" || x === "Survival") {
     document.getElementById('question2').style.display = "block";
     document.getElementById('question1').style.display = "none";
   } else {
-    text1 = "Try again, Chamoun...";
-    document.getElementById("demo1").innerHTML = text1;
+    text = "Try again, Chamoun...";
+    document.getElementById("demo1").innerHTML = text;
   }
 }
 
 function question2() {
 
-  var second, text2;
+  var x, text;
 
   // Get the value of the input field with id="numb"
-  second = document.getElementById("secondValue").value;
+  x = document.getElementById("secondValue").value;
 
-  // If x is Not a Number or less than one or greater than 10
-  if ( second === "death") {
+  if ( x === "death" || x === "Death") {
     document.getElementById('question3').style.display = "block";
     document.getElementById('question2').style.display = "none";
   } else {
-    text1 = "tsk tsk tsk";
-    document.getElementById("demo2").innerHTML = text2;
+    text = "tsk tsk tsk";
+    document.getElementById("demo2").innerHTML = text;
+  }
+}
+
+function question3() {
+
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("thirdValue").value;
+
+  if ( x === "the torment of saint anthony" || x === "the torment of Saint Anthony" || x === "The torment of Saint Anthony") {
+    document.getElementById('question4').style.display = "block";
+    document.getElementById('question3').style.display = "none";
+  } else {
+    text = "Nope. Try again.";
+    document.getElementById("demo3").innerHTML = text;
+  }
+}
+
+function question4() {
+
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("fourthValue").value;
+
+  if ( x === "21" || x === "november 21") {
+    document.getElementById('question5').style.display = "block";
+    document.getElementById('question4').style.display = "none";
+  } else {
+    text = "Watchu talkin' about...";
+    document.getElementById("demo4").innerHTML = text;
+  }
+}
+
+function question5() {
+
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("fifthValue").value;
+
+  if ( x === "lantern" || x === "Lantern" || x === "lantern consciousness") {
+    document.getElementById('question6').style.display = "block";
+    document.getElementById('question5').style.display = "none";
+  } else {
+    text = "Hmmm... are you sure though?";
+    document.getElementById("demo5").innerHTML = text;
+  }
+}
+
+function question6() {
+
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("sixthValue").value;
+
+  if ( x === "dreams" || x === "Dreams") {
+    document.getElementById('endText').style.display = "block";
+    document.getElementById('question6').style.display = "none";
+  } else {
+    text = "Maybe you need to look this one up...";
+    document.getElementById("demo6").innerHTML = text;
   }
 }
 
