@@ -106,12 +106,29 @@ function question6() {
   // Get the value of the input field with id="numb"
   x = document.getElementById("sixthValue").value;
 
-  if ( x === "dreams" || x === "Dreams") {
-    document.getElementById('endText').style.display = "block";
+  if ( x === "beauty and terror" || x === "Beauty and Terror") {
+    document.getElementById('question7').style.display = "block";
     document.getElementById('question6').style.display = "none";
   } else {
-    text = "Maybe you need to look this one up...";
+    text = "Almost there...";
     document.getElementById("demo6").innerHTML = text;
+  }
+}
+
+
+function question7() {
+
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("seventhValue").value;
+
+  if ( x === "dreams" || x === "Dreams") {
+    document.getElementById('endText').style.display = "block";
+    document.getElementById('question7').style.display = "none";
+  } else {
+    text = "Maybe you need to look this one up...";
+    document.getElementById("demo7").innerHTML = text;
   }
 }
 
