@@ -62,5 +62,9 @@ require 'rubygems'
       erb :chamoun
     end
 
+    get '/ayman' do
+      erb :ayman
+    end
+
 
 # end
