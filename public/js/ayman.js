@@ -110,7 +110,7 @@ function question6() {
     document.getElementById('question7').style.display = "block";
     document.getElementById('question6').style.display = "none";
   } else {
-    text = "Almost there...";
+    text = "Maybe look this one up...";
     document.getElementById("demo6").innerHTML = text;
   }
 }
