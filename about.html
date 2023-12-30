@@ -1,67 +1,112 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link href="public/css/style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murmuration of Starlings</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #000;
+    }
 
-  <title>Sarah Aoun</title>
+    .starling {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
+  <div id="container"></div>
 
+  <script>
+    const container = document.getElementById('container');
 
-<header id="header">
+    const numStarlings = 200; // Number of starlings
+    const starlings = [];
 
-  <h3 id="logo"><a href="index.html">SARAH AOUN</a></h3>
+    for (let i = 0; i < numStarlings; i++) {
+      const starling = document.createElement('div');
+      starling.classList.add('starling');
+      container.appendChild(starling);
 
-  <nav>
-    <a href="#" id="menu-icon"></a>
-    <ul class="navUL">
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="workshops.html">TALKS&EVENTS</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
+      starlings.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        dx: Math.random() * 2 - 1,
+        dy: Math.random() * 2 - 1,
+        angle: Math.random() * 2 * Math.PI
+      });
+    }
 
-  </nav>
+    function update() {
+      for (const starling of starlings) {
+        starling.x += starling.dx;
+        starling.y += starling.dy;
 
- </header> <!-- /header -->
+        // Check for boundaries
+        if (starling.x < 0) {
+          starling.x = 0;
+          starling.dx *= -1;
+        } else if (starling.x > window.innerWidth) {
+          starling.x = window.innerWidth;
+          starling.dx *= -1;
+        }
 
-<div class="banner"></div>
+        if (starling.y < 0) {
+          starling.y = 0;
+          starling.dy *= -1;
+        } else if (starling.y > window.innerHeight) {
+          starling.y = window.innerHeight;
+          starling.dy *= -1;
+        }
 
-<div class="row clearfix">
+        // Flock behavior
+        let separation = 0;
+        let alignment = 0;
+        let cohesion = 0;
+        let numNeighbors = 0;
 
-  <div class="col-1-2 intro1">
-    <h3>Hey there, I'm Sarah. <br>
-    I work at the intersection
-    of tech, data, and human rights.</h3>
-  </div>
+        for (const otherStarling of starlings) {
+          if (otherStarling === starling) {
+            continue;
+          }
 
-  <div class="col-1-2 intro2">
-    <p>I'm a security and privacy researcher.
-    My work lies at the intersection of tech, human rights, and transformative justice.<br>
+          const dx = otherStarling.x - starling.x;
+          const dy = otherStarling.y - starling.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
-    I work with groups around the world on security, privacy, and internet freedom.
-    Most recently, I was the VP of Security and Chief Technology Officer at the <a href= "https://opentech.fund" target="_blank">Open Technology Fund</a>,
-    an organization that funds projects, research, and technology focused on countering censorship and surveillance. 
-    I've been a <a href="https://www.newamerica.org/future-security/stmic-fellowship/about/" target="_blank">2023 New America Fellow</a>, 
-    a <a href="https://advocacy.mozilla.org/en-US/open-web-fellows/fellows2017" target="_blank">
-    2017-2018 Ford Mozilla Open Web Fellow</a>, and an <a href="https://internetfreedomfestival.org/" target="_blank">Internet Freedom Fellow</a>,
-    and am a technical advisor for <a href="https://internetfreedomfestival.org/" target="_blank"> the Internet Freedom Festival</a>,
-    the <a href="https://hrf.org/" target="_blank">Human Rights Foundation</a>, <a href="https://www.gjs-security.com/" target="_blank">Global 
-    Journalist Security</a>.
+          if (distance < 50) {
+            separation += dx + dy;
+            alignment += Math.atan2(otherStarling.dy, otherStarling.dx);
+            cohesion += otherStarling.x + otherStarling.y;
+            numNeighbors++;
+          }
+        }
 
-    You can find me somewhere in the cloud.<br>
+        if (numNeighbors > 0) {
+          separation /= numNeighbors;
+          separation = {
+            x: -separation.x,
+            y: -separation.y
+          };
 
-    Drop me a line at <a href="mailto:sarahaoun@protonmail.com">sarahaoun@pm.me</a>.
-    </p>
-  </div>
+          alignment /= numNeighbors;
+          cohesion /= numNeighbors;
 
-</div>
+          starling.angle += alignment * 0.1;
 
-</div>
-</body>
-<script src="public/js/jquery.js" type="text/javascript"></script>
-<script src="public/js/script.js" type="text/javascript"></script>
+          starling.dx = Math.cos(starling.angle) * 2 + separation.x * 0.05 + (cohesion.x - starling.x) * 0.01;
+          starling.dy = Math.sin(starling.angle) * 2 + separation.y * 0.05 + (cohesion.y - starling.y) * 0.01;
+        }
 
-</html>
+        starling.style.left = starling.x + 'px';
+        starling.style.top = starling.y + 'px';
+      }
+
+      requestAnimationFrame(update);
