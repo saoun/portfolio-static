@@ -132,11 +132,42 @@ function question7() {
   }
 }
 
-const typewriterElement = document.getElementById('typewriter-text');
-        const textToType = typewriterElement.getAttribute('data-text').split('<br>');
+  <script>
+        const typewriterElement = document.getElementById('typewriter-text');
+        const textToType = parseTextContent(typewriterElement.getAttribute('data-text'));
 
         // Set the initial text content to an empty string
         typewriterElement.innerHTML = '';
+
+        // Function to parse HTML tags and text content
+        function parseTextContent(text) {
+            const parsedText = [];
+            let currentString = '';
+            let isInTag = false;
+
+            for (const char of text) {
+                if (char === '<') {
+                    isInTag = true;
+                    currentString += char;
+                } else if (char === '>') {
+                    isInTag = false;
+                    currentString += char;
+                } else if (char === ' ' && isInTag) {
+                    currentString += char;
+                } else if (char === '<' && currentString.trim() !== '') {
+                    parsedText.push(currentString);
+                    currentString = char;
+                } else {
+                    currentString += char;
+                }
+            }
+
+            if (currentString.trim() !== '') {
+                parsedText.push(currentString);
+            }
+
+            return parsedText;
+        }
 
         // Function to simulate smooth typing effect
         function typeWriter() {
@@ -145,7 +176,24 @@ const typewriterElement = document.getElementById('typewriter-text');
             const speed = 50; // Adjust this value for typing speed
 
             function type() {
-                typewriterElement.innerHTML += textToType[paragraphIndex].charAt(i);
+                const currentChar = textToType[paragraphIndex][i];
+                if (currentChar === '<') {
+                    // Handle HTML tag
+                    let tag = currentChar;
+                    i++;
+
+                    while (i < textToType[paragraphIndex].length && textToType[paragraphIndex][i] !== '>') {
+                        tag += textToType[paragraphIndex][i];
+                        i++;
+                    }
+
+                    tag += '>';
+                    typewriterElement.innerHTML += tag;
+                } else {
+                    // Handle regular character
+                    typewriterElement.innerHTML += currentChar;
+                }
+
                 i++;
 
                 // Scroll into view after the last character is added
