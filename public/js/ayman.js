@@ -3,95 +3,6 @@
 
 console.log('helloooo');
 
-const typewriterElements = document.querySelectorAll('.typewriter-text');
-
-        typewriterElements.forEach((typewriterElement) => {
-            const textToType = parseTextContent(typewriterElement.getAttribute('data-text'));
-
-            // Set the initial text content to an empty string
-            typewriterElement.innerHTML = '';
-
-            // Function to simulate smooth typing effect
-            function typeWriter() {
-                let paragraphIndex = 0;
-                let i = 0;
-                const speed = 50; // Adjust this value for typing speed
-
-                function type() {
-                    const currentChar = textToType[paragraphIndex][i];
-                    if (currentChar === '<') {
-                        // Handle HTML tag
-                        let tag = currentChar;
-                        i++;
-
-                        while (i < textToType[paragraphIndex].length && textToType[paragraphIndex][i] !== '>') {
-                            tag += textToType[paragraphIndex][i];
-                            i++;
-                        }
-
-                        tag += '>';
-                        typewriterElement.innerHTML += tag;
-                    } else {
-                        // Handle regular character
-                        typewriterElement.innerHTML += currentChar;
-                    }
-
-                    i++;
-
-                    // Scroll into view after the last character is added
-                    if (i === textToType[paragraphIndex].length) {
-                        paragraphIndex++;
-                        i = 0;
-                        if (paragraphIndex < textToType.length) {
-                            typewriterElement.innerHTML += '<br>';
-                            typewriterElement.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }
-
-                    // Check if all characters are typed
-                    if (paragraphIndex < textToType.length) {
-                        setTimeout(type, speed);
-                    }
-                }
-
-                type();
-            }
-
-            // Call the function to start the smooth typewriter effect
-            typeWriter();
-        });
-
-        // Function to parse HTML tags and text content
-        function parseTextContent(text) {
-            const parsedText = [];
-            let currentString = '';
-            let isInTag = false;
-
-            for (const char of text) {
-                if (char === '<') {
-                    isInTag = true;
-                    currentString += char;
-                } else if (char === '>') {
-                    isInTag = false;
-                    currentString += char;
-                } else if (char === ' ' && isInTag) {
-                    currentString += char;
-                } else if (char === '<' && currentString.trim() !== '') {
-                    parsedText.push(currentString);
-                    currentString = char;
-                } else {
-                    currentString += char;
-                }
-            }
-
-            if (currentString.trim() !== '') {
-                parsedText.push(currentString);
-            }
-
-            return parsedText;
-        }
-
-
 function masterKey() {
 
   var x, text;
@@ -226,4 +137,92 @@ function question7() {
     document.getElementById("demo7").innerHTML = text;
   }
 }
+
+const typewriterElements = document.querySelectorAll('.typewriter-text');
+
+        typewriterElements.forEach((typewriterElement) => {
+            const textToType = parseTextContent(typewriterElement.getAttribute('data-text'));
+
+            // Set the initial text content to an empty string
+            typewriterElement.innerHTML = '';
+
+            // Function to simulate smooth typing effect
+            function typeWriter() {
+                let paragraphIndex = 0;
+                let i = 0;
+                const speed = 50; // Adjust this value for typing speed
+
+                function type() {
+                    const currentChar = textToType[paragraphIndex][i];
+                    if (currentChar === '<') {
+                        // Handle HTML tag
+                        let tag = currentChar;
+                        i++;
+
+                        while (i < textToType[paragraphIndex].length && textToType[paragraphIndex][i] !== '>') {
+                            tag += textToType[paragraphIndex][i];
+                            i++;
+                        }
+
+                        tag += '>';
+                        typewriterElement.innerHTML += tag;
+                    } else {
+                        // Handle regular character
+                        typewriterElement.innerHTML += currentChar;
+                    }
+
+                    i++;
+
+                    // Scroll into view after the last character is added
+                    if (i === textToType[paragraphIndex].length) {
+                        paragraphIndex++;
+                        i = 0;
+                        if (paragraphIndex < textToType.length) {
+                            typewriterElement.innerHTML += '<br>';
+                            typewriterElement.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+
+                    // Check if all characters are typed
+                    if (paragraphIndex < textToType.length) {
+                        setTimeout(type, speed);
+                    }
+                }
+
+                type();
+            }
+
+            // Call the function to start the smooth typewriter effect
+            typeWriter();
+        });
+
+        // Function to parse HTML tags and text content
+        function parseTextContent(text) {
+            const parsedText = [];
+            let currentString = '';
+            let isInTag = false;
+
+            for (const char of text) {
+                if (char === '<') {
+                    isInTag = true;
+                    currentString += char;
+                } else if (char === '>') {
+                    isInTag = false;
+                    currentString += char;
+                } else if (char === ' ' && isInTag) {
+                    currentString += char;
+                } else if (char === '<' && currentString.trim() !== '') {
+                    parsedText.push(currentString);
+                    currentString = char;
+                } else {
+                    currentString += char;
+                }
+            }
+
+            if (currentString.trim() !== '') {
+                parsedText.push(currentString);
+            }
+
+            return parsedText;
+        }
 
