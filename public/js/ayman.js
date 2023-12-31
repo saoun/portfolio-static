@@ -133,27 +133,33 @@ function question7() {
 }
 
 const typewriterElement = document.getElementById('typewriter-text');
-        const textToType = typewriterElement.getAttribute('data-text');
+        const textToType = typewriterElement.getAttribute('data-text').split('<br>');
 
         // Set the initial text content to an empty string
-        typewriterElement.textContent = '';
+        typewriterElement.innerHTML = '';
 
         // Function to simulate smooth typing effect
         function typeWriter() {
+            let paragraphIndex = 0;
             let i = 0;
             const speed = 50; // Adjust this value for typing speed
 
             function type() {
-                typewriterElement.textContent += textToType.charAt(i);
+                typewriterElement.innerHTML += textToType[paragraphIndex].charAt(i);
                 i++;
 
                 // Scroll into view after the last character is added
-                if (i === textToType.length) {
-                    typewriterElement.scrollIntoView({ behavior: 'smooth' });
+                if (i === textToType[paragraphIndex].length) {
+                    paragraphIndex++;
+                    i = 0;
+                    if (paragraphIndex < textToType.length) {
+                        typewriterElement.innerHTML += '<br>';
+                        typewriterElement.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }
 
                 // Check if all characters are typed
-                if (i < textToType.length) {
+                if (paragraphIndex < textToType.length) {
                     setTimeout(type, speed);
                 }
             }
