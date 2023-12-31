@@ -129,11 +129,11 @@ function question7() {
   // Get the value of the input field with id="numb"
   x = document.getElementById("seventhValue").value;
 
-  if ( x === "dreams" || x === "Dreams") {
+  if ( x === "platonic" || x === "Platonic") {
     document.getElementById('endText').style.display = "block";
     document.getElementById('question7').style.display = "none";
   } else {
-    text = "Maybe you need to look this one up...";
+    text = "It's a funny one... think harder. We've definitely retired it since then";
     document.getElementById("demo7").innerHTML = text;
   }
 }
