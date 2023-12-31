@@ -112,7 +112,7 @@ function question6() {
   // Get the value of the input field with id="numb"
   x = document.getElementById("sixthValue").value;
 
-  if ( x === "beauty and terror" || x === "Beauty and Terror") {
+  if ( x === "beauty and terror" || x === "Beauty and Terror" || x === "Beauty and terror") {
     document.getElementById('question7').style.display = "block";
     document.getElementById('question6').style.display = "none";
   } else {
