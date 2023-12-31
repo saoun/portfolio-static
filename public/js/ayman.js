@@ -80,7 +80,7 @@ function question4() {
   // Get the value of the input field with id="numb"
   x = document.getElementById("fourthValue").value;
 
-  if ( x === "coude a coude" || x === "coude à coude" || x === "Coude a coude") {
+  if ( x === "coude a coude" || x === "coude à coude" || x === "Coude a coude" || x === "Coude à coude") {
     document.getElementById('question5').style.display = "block";
     document.getElementById('question4').style.display = "none";
   } else {
@@ -116,7 +116,7 @@ function question6() {
     document.getElementById('question7').style.display = "block";
     document.getElementById('question6').style.display = "none";
   } else {
-    text = "Maybe look this one up...";
+    text = "What sentence comes next? Maybe look this one up...";
     document.getElementById("demo6").innerHTML = text;
   }
 }
