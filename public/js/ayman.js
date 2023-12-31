@@ -132,7 +132,6 @@ function question7() {
   }
 }
 
-  <script>
         const typewriterElement = document.getElementById('typewriter-text');
         const textToType = parseTextContent(typewriterElement.getAttribute('data-text'));
 
